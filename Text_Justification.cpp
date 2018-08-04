@@ -22,3 +22,14 @@ for(int i=0;i<v.size();i++)
   l.push_back(v[i].length());
 }
 }
+void greedy_justify::justify(int justify_length)
+{
+for(int j=0;j<l.size();j++)
+{
+  cout << l[j] << endl;
+}
+}
+void greedy_justify::print_justify()
+{
+  cout << "print greedy justify" << endl;
+}
