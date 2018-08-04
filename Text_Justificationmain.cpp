@@ -4,8 +4,9 @@
 using namespace std;
 int main()
 {
-  string temp="how are you this is amazing.";
+  string temp="blah blah blah";
   greedy_justify obj1(temp);
   obj1.justify(10);
+  obj1.print_justify();
   return 0;
 }

@@ -24,12 +24,31 @@ for(int i=0;i<v.size();i++)
 }
 void greedy_justify::justify(int justify_length)
 {
+int length=0;
 for(int j=0;j<l.size();j++)
 {
-  cout << l[j] << endl;
+if(length >= justify_length || j==l.size()-1)
+{
+result.push_back(j);
+length=0;
+}
+else
+{
+length=length+l[j]+1;
+}
 }
 }
 void greedy_justify::print_justify()
 {
-  cout << "print greedy justify" << endl;
+  int index=0;
+  for(int i=0;i<result.size();i++)
+  {
+    for(int j=index;j<result[i];j++)
+    {
+      cout << v[j] << " ";
+    }
+    index=result[i];
+    cout << "|";
+    cout << endl;
+  }
 }
