@@ -27,10 +27,15 @@ void greedy_justify::justify(int justify_length)
 int length=0;
 for(int j=0;j<l.size();j++)
 {
-if(length >= justify_length || j==l.size()-1)
+if(length >= justify_length)
 {
-result.push_back(j);
+result.push_back(j-1);
+j=j-1;
 length=0;
+}
+if(j==l.size()-1)
+{
+  result.push_back(j);
 }
 else
 {
@@ -41,6 +46,10 @@ length=length+l[j]+1;
 void greedy_justify::print_justify()
 {
   int index=0;
+  // for(int i=0;i<result.size();i++)
+  // {
+  //   cout << result[i] << endl;
+  // }
   for(int i=0;i<result.size();i++)
   {
     for(int j=index;j<result[i];j++)
