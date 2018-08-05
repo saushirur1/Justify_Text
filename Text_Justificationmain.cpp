@@ -8,6 +8,6 @@ int main()
   greedy_justify obj1(temp);
   obj1.justify(10);
   obj1.print_justify();
-  dynamic_justify obj2;
+  dynamic_justify obj2(temp);
   return 0;
 }

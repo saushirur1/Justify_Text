@@ -61,9 +61,25 @@ void greedy_justify::print_justify()
     cout << endl;
   }
 }
-dynamic_justify::dynamic_justify()
+dynamic_justify::dynamic_justify(string text)
 {
-  cout << "Created dynamic_justify object" << endl;
+  int word="";
+  for(int i=0;i<text.length();i++)
+  {
+    if(text[i]==' ' || i==text.length()-1)
+    {
+     v.push_back(word);
+      word="";
+    }
+    else
+    {
+      word=word+text[i];
+    }
+  }
+  for(int i=0;i<v.size();i++)
+  {
+    l.push_back(v[i].length());
+  }
 }
 int dynamic_justify::badness(int index1,int index2)
 {

@@ -15,8 +15,10 @@ public:
 class dynamic_justify
 {
   std::vector<std::string> v;
+  std::vector<int> l;
+  std::vector<int> result;
 public:
-  dynamic_justify();
+  dynamic_justify(std::string text);
   void dy_justify(int length);
   int badness(int index1,int index2);
 };
