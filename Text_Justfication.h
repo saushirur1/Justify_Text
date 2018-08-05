@@ -12,3 +12,9 @@ public:
   void justify(int justify_length);
   void print_justify();
 };
+class dynamic_justify
+{
+  std::vector<std::string> v;
+public:
+  dynamic_justify();
+};
