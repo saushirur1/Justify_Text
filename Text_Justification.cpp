@@ -61,3 +61,11 @@ void greedy_justify::print_justify()
     cout << endl;
   }
 }
+dynamic_justify::dynamic_justify()
+{
+  cout << "Created dynamic_justify object" << endl;
+}
+int dynamic_justify::badness(int index1,int index2)
+{
+  cout << "badness function" << endl;
+}

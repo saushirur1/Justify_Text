@@ -17,4 +17,6 @@ class dynamic_justify
   std::vector<std::string> v;
 public:
   dynamic_justify();
+  void dy_justify(int length);
+  int badness(int index1,int index2);
 };
